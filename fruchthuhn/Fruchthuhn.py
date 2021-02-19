@@ -27,6 +27,15 @@ def draw():
     screen.draw.text(str(score), (400, 0), fontsize=50, color="black")
     fruit.draw()
 
+    fruit.x += randint(-20, 20)
+    fruit.y += randint(-20, 20)
+
+    if fruit.x >= WIDTH - 20:
+        fruit.x = 10
+
+    if fruit.y >= HEIGHT - 20:
+        fruit.y = 10
+
     screen.draw.text("Verbleibende Zeit: %s" % round(timer), (0, 0), color="black")
 
     draw_lives()
