@@ -15,6 +15,7 @@ WIDTH = 800
 HEIGHT = 600
 TITLE = 'Fruchthuhn'
 
+
 def update(dt):
     global timer, player_lives
     if timer >= 0 and player_lives > 0:

@@ -14,6 +14,8 @@ HEIGHT = 600
 def draw():
     # leere den bildschirm
     screen.clear()
+    # zeige ein hintergrundbild an
+    screen.blit("background", (0, 0))
     # zeichne die frucht
     frucht.draw()
 
