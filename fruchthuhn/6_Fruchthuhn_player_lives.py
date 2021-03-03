@@ -80,7 +80,7 @@ def init():
     place_fruit()
     timer = 30
 
-    # resette leben
+    # setze das leben wieder auf 3
     player_lives = 3
 
 

@@ -41,8 +41,6 @@ def draw():
 def place_fruit():
     frucht.x = randint(10, WIDTH)
     frucht.y = randint(10, HEIGHT)
-
-    # aendere das bild der aktuellen frucht durch ein neues zufaelliges bild aus 'fruechte'
     frucht.image = fruechte[randint(0, len(fruechte) - 1)]
 
 
