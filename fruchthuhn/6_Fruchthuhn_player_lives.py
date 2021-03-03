@@ -58,14 +58,15 @@ def place_fruit():
 
 
 def on_mouse_down(pos):
-    global score, timer
-
+    global score, timer, player_lives
     if timer > 0:
         if frucht.collidepoint(pos):
             print("Treffer!")
             place_fruit()
             score += 1
         else:
+            # ziehe ein Leben ab.
+            player_lives -= 1
             print("Daneben!")
 
 
