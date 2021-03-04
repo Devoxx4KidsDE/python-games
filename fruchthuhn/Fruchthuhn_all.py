@@ -40,10 +40,17 @@ def move_frucht():
     frucht.x += randint(-20, 20)
     frucht.y += randint(-20, 20)
 
-    if WIDTH - 20 <= frucht.x <= 0:
-        frucht.x = 10
-    if HEIGHT - 20 <= frucht.y <= 0:
-        frucht.y = 10
+    if frucht.x <= 10:
+        frucht.x = 30
+
+    if WIDTH - 20 <= frucht.x:
+        frucht.x = WIDTH - 30
+
+    if frucht.x <= 10:
+        frucht.y = 30
+
+    if HEIGHT - 20 <= frucht.y:
+        frucht.y = HEIGHT - 20
 
 
 def draw_lives():
