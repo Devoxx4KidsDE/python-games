@@ -10,7 +10,7 @@ frucht = Actor(fruechte[randint(0, len(fruechte) - 1)])
 score = 0
 timer = 30
 
-# neue variable für die anzahl der Leben
+# neue variable für die Anzahl der Leben
 player_lives = 3
 
 WIDTH = 800
@@ -80,7 +80,6 @@ def init():
     score = 0
     place_fruit()
     timer = 30
-
     # setze das leben wieder auf 3
     player_lives = 3
 

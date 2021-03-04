@@ -12,13 +12,10 @@ player_lives = 3
 
 WIDTH = 800
 HEIGHT = 600
-# Titel für den Spielebildschirm
 TITLE = 'Fruchthuhn'
 
 def update(dt):
     global timer, player_lives
-
-    # update den timer nur wenn Leben da sind und timer nicht 0
     if timer >= 0 and player_lives > 0:
         timer -= dt
 
@@ -29,9 +26,7 @@ def draw():
     screen.draw.text(str(score), (400, 0), fontsize=50, color="black")
     frucht.draw()
     screen.draw.text("Verbleibende Zeit: %s" % round(timer), (0, 0), color="black")
-
     move_frucht()
-
     draw_lives()
     if player_lives == 0 or timer < 0:
         draw_game_over()
@@ -56,7 +51,6 @@ def draw_lives():
         screen.blit('heart', (WIDTH-30-(life*16), 10))
 
 
-# Funktion, die prüft was für ein Game over angezeigt werden soll
 def draw_game_over():
     global timer, score
     if timer > 0:
