@@ -1,10 +1,10 @@
-from random import randint
+from random import randint, choice
 
 import pgzrun
 from pgzero.actor import Actor
 
 fruechte = ['apple', 'orange', 'pineapple']
-frucht = Actor(fruechte[randint(0, len(fruechte) - 1)])
+frucht = Actor(choice(fruechte))
 
 score = 0
 timer = 30
@@ -62,7 +62,7 @@ def draw_game_over():
 def place_fruit():
     frucht.x = randint(10, WIDTH)
     frucht.y = randint(10, HEIGHT)
-    frucht.image = fruechte[randint(0, len(fruechte) - 1)]
+    frucht.image = choice(fruechte)
 
 
 def on_mouse_down(pos):

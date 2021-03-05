@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, choice
 
 import pgzrun
 from pgzero.actor import Actor
@@ -6,7 +6,7 @@ from pgzero.actor import Actor
 # array mit den frucht bildern
 fruechte = ['apple', 'orange', 'pineapple']
 # waehle ein bild zufaellig aus 'fruechte' aus
-frucht = Actor(fruechte[randint(0, len(fruechte) - 1)])
+frucht = Actor(choice(fruechte))
 
 
 score = 0
@@ -27,7 +27,7 @@ def place_fruit():
     frucht.y = randint(10, HEIGHT)
 
     # aendere das bild der aktuellen frucht durch ein neues zufaelliges bild aus 'fruechte'
-    frucht.image = fruechte[randint(0, len(fruechte) - 1)]
+    frucht.image = choice(fruechte)
 
 
 def on_mouse_down(pos):
