@@ -62,7 +62,7 @@ def draw_game_over():
 def place_fruit():
     frucht.x = randint(10, WIDTH)
     frucht.y = randint(10, HEIGHT)
-    frucht.image = fruechte[choice(fruechte)]
+    frucht.image = choice(fruechte)
 
 
 def on_mouse_down(pos):

@@ -27,7 +27,7 @@ def place_fruit():
     frucht.y = randint(10, HEIGHT)
 
     # aendere das bild der aktuellen frucht durch ein neues zufaelliges bild aus 'fruechte'
-    frucht.image = fruechte[choice(fruechte)]
+    frucht.image = choice(fruechte)
 
 
 def on_mouse_down(pos):
