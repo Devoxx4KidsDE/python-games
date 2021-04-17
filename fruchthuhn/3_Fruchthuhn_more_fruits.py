@@ -31,6 +31,7 @@ def place_fruit():
 
 
 def on_mouse_down(pos):
+    global score
     if frucht.collidepoint(pos):
         print("Treffer!")
         place_fruit()
