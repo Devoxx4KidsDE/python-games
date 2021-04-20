@@ -7,7 +7,7 @@ Mit Hilfe von [pygamezero](https://pygame-zero.readthedocs.io/de/latest/introduc
 
 ## Voraussetzungen
 
-Klone dieses Repository oder lade dir das [Release](https://github.com/Devoxx4KidsDE/python-games/archive/refs/tags/9bec350.zip) herunter und entpacke es.
+Klone dieses Repository oder lade dir das [Release](https://github.com/Devoxx4KidsDE/python-games/releases/latest) herunter und entpacke es.
 
 Begib dich mit einer Shell in das Verzeichnis und installiere alles was python braucht mit: 
 ````commandline
