@@ -3,8 +3,8 @@ from random import randint
 import pgzrun
 from pgzero.actor import Actor
 
-# neue Figur mit dem Bild "apple"
-frucht = Actor("apple")
+# neue Figur mit dem Bild "apfel"
+frucht = Actor("apfel")
 
 # lege die größe des Spielbildschirms fest
 WIDTH = 800
@@ -15,13 +15,13 @@ def draw():
     # leere den bildschirm
     screen.clear()
     # zeige ein hintergrundbild an
-    screen.blit("background", (0, 0))
+    screen.blit("hintergrund", (0, 0))
     # zeichne die frucht
     frucht.draw()
 
 
 # setzt legt die Position der Frucht fest
-def place_fruit():
+def platziere_frucht():
     frucht.x = randint(10, WIDTH)
     frucht.y = randint(10, HEIGHT)
 
@@ -33,7 +33,7 @@ def on_mouse_down(pos):
     if frucht.collidepoint(pos):
         print("Treffer!")
         # positioniere die frucht neu
-        place_fruit()
+        platziere_frucht()
     else:
         # gebe auf der console aus, dass daneben geklickt wurde
         print("Daneben!")
@@ -42,7 +42,7 @@ def on_mouse_down(pos):
 # ist eine initiale function die dafür verwendet wird
 # alle Werte auf den Spielanfangswerte zurück
 def init():
-    place_fruit()
+    platziere_frucht()
 
 init()
 # starte das spiel
