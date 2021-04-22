@@ -146,5 +146,8 @@ dmypy.json
 
 .idea/
 
+# ignore currently open changed python description .odp
+.~lock.*
+
 # mac files
 .DS_Store

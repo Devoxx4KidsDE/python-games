@@ -15,7 +15,7 @@ HEIGHT = 600
 
 def draw():
     screen.clear()
-    screen.blit("background", (0, 0))
+    screen.blit("hintergrund", (0, 0))
 
     screen.draw.text(str(score), (400, 0), fontsize=50, color="black")
 
