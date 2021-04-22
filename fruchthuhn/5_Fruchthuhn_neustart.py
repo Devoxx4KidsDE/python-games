@@ -3,11 +3,11 @@ from random import randint, choice
 import pgzrun
 from pgzero.actor import Actor
 
-fruechte = ['apple', 'orange', 'pineapple']
+fruechte = ['apfel', 'orange', 'ananas']
 frucht = Actor(choice(fruechte))
 
 
-score = 0
+punktestand = 0
 timer = 30
 
 WIDTH = 800
@@ -22,32 +22,32 @@ def update(dt):
 
 def draw():
     screen.clear()
-    screen.blit("background", (0, 0))
+    screen.blit("hintergrund", (0, 0))
 
-    screen.draw.text(str(score), (400, 0), fontsize=50, color="black")
+    screen.draw.text(str(punktestand), (400, 0), fontsize=50, color="black")
 
     frucht.draw()
 
     screen.draw.text("Verbleibende Zeit: %s" % round(timer), (0, 0), color="black")
 
     if timer < 0:
-        screen.draw.textbox("Game Over!\n %s Punkte erreicht" % score, Rect(100, 100, 600, 400), background="black")
+        screen.draw.textbox("Game Over!\n %s Punkte erreicht" % punktestand, Rect(100, 100, 600, 400), background="black")
 
 
-def place_fruit():
+def platziere_frucht():
     frucht.x = randint(10, WIDTH)
     frucht.y = randint(10, HEIGHT)
     frucht.image = choice(fruechte)
 
 
 def on_mouse_down(pos):
-    global score, timer
+    global punktestand, timer
 
     if timer > 0:
         if frucht.collidepoint(pos):
             print("Treffer!")
-            place_fruit()
-            score += 1
+            platziere_frucht()
+            punktestand += 1
         else:
             print("Daneben!")
 
@@ -61,9 +61,9 @@ def on_key_down(key):
 
 
 def init():
-    global score, timer
-    score = 0
-    place_fruit()
+    global punktestand, timer
+    punktestand = 0
+    platziere_frucht()
     timer = 30
 
 
